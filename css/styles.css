@@ -1,0 +1,130 @@
+:root {
+  --mainFont: "Montserrat", sans-serif;
+  --ScdFont: "Fraunces", serif;
+
+  --green: #3c8067;
+  --cream: #f2ebe3;
+  --white: #ffffff;
+  --gray: #6c7289;
+  --darkBlue: #1c232b;
+}
+
+/* Generals */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: var(--cream);
+  font-family: var(--mainFont);
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+/**** WORK ****/
+
+/* Mobile */
+.card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  width: 90%;
+  height: 65rem;
+}
+.card__container {
+  width: 85%;
+  margin: 0 auto;
+}
+.card__image {
+  background-image: url(/images/image-product-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 25rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  /* display: block;
+  max-width: 100%; */
+  /* border-radius: 1rem; */
+}
+.card__title {
+  color: var(--gray);
+  font-weight: 300;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.5rem;
+}
+.card__name {
+  font-family: var(--ScdFont);
+  color: var(--darkBlue);
+}
+.card_description {
+  font-size: 1.4rem;
+  color: var(--gray);
+  line-height: 1.5;
+  margin: 0;
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.principal__price {
+  color: var(--gray);
+  font-size: 1.3rem;
+  text-decoration: line-through;
+}
+.principal__price--sale {
+  color: var(--green);
+  font-family: var(--ScdFont);
+  font-size: 3.5rem;
+  text-decoration: none;
+  margin: 2rem 0;
+}
+
+.card__button {
+  background-color: var(--green);
+  display: block;
+  width: 100%;
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: background-color 0.3s;
+}
+.card__button:hover {
+  cursor: pointer;
+  background-color: #224b3c;
+}
+
+/* Desktop */
+@media (min-width: 376px) {
+  .card {
+    display: flex;
+    width: 60rem;
+    height: 46rem;
+  }
+  .card__image {
+    background-image: url(/images/image-product-desktop.jpg);
+    height: 46rem;
+    width: 100%;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+  }
+  .card__container {
+    padding: 1rem 2rem;
+  }
+}
